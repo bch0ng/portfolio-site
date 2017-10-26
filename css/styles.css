@@ -1,0 +1,100 @@
+:root {
+  --header-color: #c0e9e0;
+  --body-color: #FFF;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h1, li {
+  font-family: 'Playfair Display', serif;
+}
+body, h3, .navContent {
+  font-family: 'Raleway', sans-serif;
+}
+h3 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 20pt;
+  color: var(--header-color);
+  font-style: italic;
+}
+
+#heading {
+  position: absolute;
+  left: -15px;
+  top: 5px;
+  writing-mode: tb-rl;
+  transform: rotate(-90deg);
+}
+#heading h1 {
+  transform: rotate(-90deg);
+  position: relative;
+  font-size: 50pt;
+  text-align: right;
+}
+
+#myPicture {
+  position: fixed;
+  bottom: -10px;
+  width: 100%;
+}
+#myPicture > img{
+  width: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+#nav {
+  bottom: 0;
+  width: 100%;
+}
+#nav ul {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: var(--header-color);
+}
+#nav li {
+  display: inline-flex;
+  align-self: flex-start;
+  color: var(--body-color);
+  padding: 1%;
+  font-size: 16pt;
+  text-align: center;
+  margin: 1% auto;
+}
+#nav a {
+  text-decoration: none;
+  color: var(--body-color);
+}
+#nav a:hover {
+  color: var(--header-color);
+}
+#nav a:hover > img {
+  background: #000;
+}
+#nav img {
+  width: 12px;
+  height: 12px;
+}
+.inlineContent {
+  display: inline-flex;
+  justify-content: center;
+  line-height: 15px;
+}
+.inlineContent a {
+  margin: 0 5px;
+}
+.navContent {
+  font-size: 9pt !important;
+}
+.contactList {
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 3px;
+}
