@@ -4,10 +4,10 @@
     $(".subHeader").css("font-size", "10vw");
     $("#myPicture > img").hide();
     setTimeout(appearance, 500);
+    linkHover();
   };
 
   function appearance() {
-    //debugger;
     for(var i = 0; i < 4; i++) {
       if (i < 3) {
         (function(i) {
@@ -28,9 +28,23 @@
     };
   };
 
-  function removingClass(className, index, classToRemove) {
-    $(className).eq(index).removeClass(classToRemove);
+  function linkHover() {
+    $("#githubIcon").hover(function() {
+      $("#githubIcon > img").attr("src", "img/GitHub-Mark-32px.png");
+      }, function() {
+      $("#githubIcon > img").attr("src", "img/GitHub-Mark-Light-32px.png");
+    });
+    $("#linkedinIcon").hover(function() {
+      $("#linkedinIcon > img").attr("src", "img/In-Black-14px.png");
+      }, function() {
+      $("#linkedinIcon > img").attr("src", "img/In-White-14px.png");
+    });
+    // PDF icon
+    $("#pdfIcon").hover(function() {
+      $("#pdfIcon > img").attr("src", "img/In-Black-14px.png");
+      }, function() {
+      $("#pdfIcon > img").attr("src", "img/In-White-14px.png");
+    });
   };
-
 
 })();

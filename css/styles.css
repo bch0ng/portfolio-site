@@ -84,11 +84,9 @@ body, h3, .navContent {
   color: var(--body-color);
 }
 #nav a:hover {
-  color: var(--header-color);
+  color: #000 !important;
 }
-#nav a:hover > img {
-  background: #000;
-}
+
 #nav img {
   width: 12px;
   height: 12px;
