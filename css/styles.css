@@ -6,19 +6,40 @@
   margin: 0;
   padding: 0;
 }
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
 p, li {
   font-family: 'Playfair Display', serif;
 }
-body, h3, .navContent {
+body, h2, h3, .navContent, footer {
   font-family: 'Raleway', sans-serif;
+}
+hr {
+  width: 30%;
+  border: none;
+  border-bottom: 30px dotted var(--header-color);
+  margin: 20px auto;
+}
+footer {
+  position: fixed;
+  font-color: var(--body-color);
+  font-size: 7pt;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  user-select: none;
 }
 
 #heading {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0.5%;
   writing-mode: tb-rl;
   transform: rotate(-90deg);
+  z-index: -1;
+  user-select: none;
 }
 #heading p {
   transform: rotate(-90deg);
@@ -28,7 +49,7 @@ body, h3, .navContent {
   line-height: 8vh;
 }
 
-#myPicture > h3 {
+#container > h3 {
   position: relative;
   width: 100% !important;
   margin: 0 auto;
@@ -40,23 +61,103 @@ body, h3, .navContent {
   font-style: italic;
   font-weight: 500;
 }
+.subHeader {
+  z-index: -3;
+  user-select: none;
+}
 .subHeaderShrink {
   display: block !important;
   font-size: 3vh !important;
   transition: all 0.2s ease;
 }
 
-#myPicture {
+.transition {
+  transition: all 0.2s ease;
+}
+
+#container {
   position: fixed;
   bottom: -10px;
   width: 100%;
 }
-#myPicture > img{
+#container > img{
   width: 80vh;
   display: block;
   margin: 0 auto;
+  z-index: -5;
+  user-select: none;
 }
 
+#about {
+  display: none;
+  text-align: center;
+}
+#nav #about a:hover {
+  color: #FFF !important;
+}
+
+#aboutMeContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #FFF;
+  overflow-y: scroll;
+  z-index: -3;
+  border-bottom: 10px dashed var(--header-color);
+}
+#aboutMe {
+  width: 50%;
+  margin: 0 auto;
+}
+#aboutMe > h2 {
+  color: var(--header-color);
+  font-size: 50pt;
+  text-align: center;
+  width: 100%;
+  font-weight: 100;
+  font-style: italic;
+}
+#aboutMe > p {
+  font-size: 12pt;
+}
+#aboutMe > img {
+  display: block;
+  margin-top: 100px !important;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid var(--header-color);
+}
+
+#aboutMe a {
+  color: var(--header-color);
+}
+#aboutMe a:hover {
+  color: var(--body-color);
+}
+
+#possibleHeaders {
+  display: none;
+}
+.start {
+  line-height: 0;
+  font-size: 40pt;
+  font-weight: 500;
+}
+#socialMedia {
+  list-style: none;
+}
+.followMessage {
+  font-size: 18pt;
+}
+#socialMedia li {
+  margin-left: 25px;
+}
+#socialMedia a:hover {
+  color: var(--body-color);
+}
 #nav {
   bottom: 0;
   width: 100%;
@@ -80,7 +181,6 @@ body, h3, .navContent {
   margin: 1% auto;
 }
 #nav a {
-  text-decoration: none;
   color: var(--body-color);
 }
 #nav a:hover {
